@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CI/CD Pipeline Assignment - FA23-BCT-041</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; background: #f2f5f9; margin: 0; color: #1f2d3d; }
+    .card { max-width: 560px; margin: 60px auto; background: #fff; padding: 32px; border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+    h1 { margin-top: 0; color: #0b5ed7; }
+    .info p { margin: 4px 0; font-size: 1.05rem; }
+    hr { margin: 24px 0; border: none; border-top: 1px solid #dde3ea; }
+    button { background: #0b5ed7; color: #fff; border: 0; padding: 10px 18px; border-radius: 6px;
+             font-size: 1rem; cursor: pointer; }
+    input { padding: 9px; font-size: 1rem; width: 60%; border: 1px solid #aab4c0; border-radius: 6px; }
+    #message, #output { margin-top: 14px; font-weight: bold; color: #198754; min-height: 1.2em; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="heading">CI/CD Pipeline Assignment</h1>
+    <div class="info">
+      <p>Name: <span id="name">Syed Zurriat Hussain</span></p>
+      <p>Roll Number: <span id="roll">FA23-BCT-041</span></p>
+    </div>
+    <hr>
+    <button id="msg-btn" type="button">Click Me</button>
+    <div id="message"></div>
+    <hr>
+    <input id="text-input" type="text" placeholder="Type something here">
+    <button id="submit-btn" type="button">Submit</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    document.getElementById('msg-btn').addEventListener('click', function () {
+      document.getElementById('message').textContent = 'Button clicked successfully!';
+    });
+    document.getElementById('submit-btn').addEventListener('click', function () {
+      var value = document.getElementById('text-input').value;
+      document.getElementById('output').textContent = 'You entered: ' + value;
+    });
+  </script>
+</body>
+</html>
